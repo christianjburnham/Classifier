@@ -25,6 +25,7 @@
     _errorDictionary = [NSMutableDictionary dictionary];
     _validateArray = [NSMutableArray array];
     
+
     _training = 1;
     
     _trainingModel = 0;
@@ -32,6 +33,10 @@
     _invariant = 1;
     
     _inverse = 1;
+    
+
+    
+//default parameters
     
     _n_max = 10;
     
@@ -48,7 +53,7 @@
     _fitPicHeightMax=512;
 
 
-    
+
     
     _databaseName = @"untitled";
     
