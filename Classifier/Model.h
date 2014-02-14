@@ -113,8 +113,6 @@ typedef struct IndexedFloat {
 } IndexedFloat;
 
 const char* getfield(char* line, int num);
-int doesFileExist(const char *filename);
-
 
 NSBitmapImageRep *ImageRepFromImage(NSImage *image);
 void findAxes(unsigned char* greyData,int w,int h, float* xCenter, float* yCenter,

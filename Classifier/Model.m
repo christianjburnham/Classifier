@@ -74,6 +74,9 @@
 
 
 -(void) calculate{
+//  This subroutine performs an expansion in Gauss Laguerre Circular Harmonics, constructs the finite expansion approximation to the image and also calls the neural network or nearest neighbor classifiers.
+    
+    
     
 // calculate origin and principle axes
     findAxes(_greyPicData, _picWidth, _picHeight,&_xCenter,&_yCenter,
@@ -91,7 +94,7 @@
     [self calculateErrors:coeff];
     NSDate *stop = [NSDate date];
     NSTimeInterval duration = [stop timeIntervalSinceDate:start];
-    NSLog(@"elapsed time = %f",duration);
+//    NSLog(@"elapsed time = %f",duration);
     
     //now construct the image from the coefficients
     _fit = getFittedImage(_fitPicWidth, _fitPicHeight, _n_max, _xCenter, _yCenter, sigma, coeff, norm);
@@ -147,7 +150,7 @@
 }//-(void) calculate
 
 -(void) calculateErrors: (double*) coeff{
-
+//Find the rankings using either the neural network or nearest neighbor classifiers.
 
     if(_trainingModel == 0){
         [self calculateErrorsForNearestNeighbor:coeff];
@@ -174,6 +177,8 @@
 
 
 -(void) calculateErrorsForNearestNeighbor: (double*) coeff{
+//calculate the rankings for the nearest neighbor classifier
+    
     if(_invariant == 1){
         [self calculateErrorsForNearestNeighborWithRotationalInvariance:coeff];
     }else if (_invariant == 0){
@@ -184,7 +189,7 @@
 
 
 -(void) calculateErrorsForNearestNeighborWithRotationalInvariance: (double*) coeff{
-    //  calculates error for rotationally invariant patterns
+    //  calculates rankings for nearest neighbor classifier for rotationally invariant patterns
 
     _errorDictionary = [NSMutableDictionary dictionary];
     
@@ -269,7 +274,7 @@
 
 -(void) calculateErrorsForNearestNeighborWithNoRotationalInvariance: (double*) coeff{
 
-    //  calculates error for patterns with no assumed rotational invariance
+    //  calculates rankings for nearest neighbor classifier for non-rotationally invariant patterns
     _errorDictionary = [NSMutableDictionary dictionary];
     
     double cPlus[_n_max][_n_max],cMinus[_n_max][_n_max],c0[_n_max];
@@ -345,12 +350,18 @@
 
 
 -(void) calculateErrorsForNeuralNet:(double*) coeff{
+    //calculate rankings for neural net classifier
+    
+    
     if(_invariant == 1) [self calculateErrorsForInvariantNeuralNet:coeff];
     if(_invariant == 0) [self calculateErrorsForNonInvariantNeuralNet:coeff];
 }//-(void) calculateErrorsForNeuralNet:(double*) coeff
 
 
 -(void) calculateErrorsForInvariantNeuralNet:(double*) coeff{
+    //  calculates rankings for nerual net classifier for rotationally invariant patterns
+
+    
     _errorDictionary = [NSMutableDictionary dictionary];
     
     int nInput = _n_max*_n_max-_n_max;
@@ -404,6 +415,8 @@
 }//-(void) calculateErrorsForInvariantNeuralNet:(double*) coeff
 
 -(void) calculateErrorsForNonInvariantNeuralNet:(double*) coeff{
+    //  calculates rankings for nerual net classifier for non-rotationally invariant patterns
+    
     _errorDictionary = [NSMutableDictionary dictionary];
     
     int nInput = _n_max*_n_max-1;
@@ -439,6 +452,8 @@
 
 
 -(void) createNeuralNet{
+    //used to train the neural net
+    
     if([_coefficientsDictionary count]>0){
         [self createNonInvariantNeuralNet];
         [self createInvariantNeuralNet];
@@ -448,6 +463,9 @@
 
 
 -(void) createNonInvariantNeuralNet{
+    //For training a non-rotationally invariant neural net
+
+    
     FILE *f = fopen("train.data", "w");
     
     
@@ -541,6 +559,9 @@
 
 
 -(void) createInvariantNeuralNet{
+    //For training a rotationally invariant neural net
+
+    
     FILE *f = fopen("train.data", "w");
     
     
@@ -650,6 +671,9 @@
 
 
 -(void) createPatternList{
+    //Creates a NSMutableArray of all the class labels
+
+    
     patternList = [NSMutableArray array];
     int count = 0;
     for(id key in _coefficientsDictionary){
@@ -663,7 +687,7 @@
 
 
 -(void) validate{
-
+    //For running k-fold cross validation
     
     if([_coefficientsDictionary count] == 0){
         NSLog(@"error: no entries in database");
@@ -937,7 +961,7 @@
 
 
 -(void) cluster{
-    
+    //The k-fold clustering algorithm
     
     float tol = 1.e-3;
     
@@ -1080,6 +1104,8 @@
 
 -(void) calculateCluster{
   
+    //Now that the clustering has been determined, evaluate the patterns based on each cluster
+    
     
     NSMutableString* best = [NSMutableString string];
     NSArray* split;
@@ -1201,12 +1227,10 @@
 
 
 -(IBAction)kagglePressed:(id)sender{
+//  Train on batch CSV file, e.g. the kaggle data
+    
+    
     NSLog(@"kaggle");
-    if (doesFileExist("train.csv"))
-    {
-        printf ("It exists\n");
-    }
-
     
     FILE* stream = fopen("train.csv", "r");
     
@@ -1240,13 +1264,6 @@
 
 @end
 
-int doesFileExist(const char *filename) {
-    struct stat st;
-    int result = stat(filename, &st);
-    return result == 0;
-}
-
-
 
 const char* getfield(char* line, int num)
 {
@@ -1262,6 +1279,8 @@ const char* getfield(char* line, int num)
 }
 
 int assignCluster(int nCluster, float** clusterCentroid,IndexedFloat* clusterIndex,float xf, float yf, float* r2min){
+//Used by the clustering algorithm to assign a particular x-y coordinate to a particular cluster
+    
     int jmin = -1;
     
     *r2min = 10.;
@@ -1282,7 +1301,9 @@ int assignCluster(int nCluster, float** clusterCentroid,IndexedFloat* clusterInd
 
 void findAxes(unsigned char* greyData,int w,int h,float* xCenter, float* yCenter,
               float* xx, float* xy, float* yx, float* yy, float* xvar, float* yvar){
-
+//Locate the center of the distribution and find the axes
+    
+    
     float greyScale,gsum;
     *xCenter = 0;
     *yCenter = 0;
