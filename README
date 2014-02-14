@@ -1,2 +1,48 @@
-A 2D Pattern Classification App
+A 2D Pattern Classification App for Mac OS X 10.6-
+----------------------------------------------------
+
+(c) 2014 Christian J Burnham, DT265, Dublin Institute of Technology.
+
+Abstract:  This app performs 2D pattern classification using a neural network classifier on tuples extracted from the coefficients of an expansion in terms of Gauss Laguerre Circular Harmonics (GLCH).
+
+Instructions:
+
+Main Window:
+
+	To enter a pattern, either use the mouse to draw in the 'draw window' on the top-left of the main window or press the 'upload' button to upload an image from file.
+
+	If the mode is set to 'train' then a label indicating the pattern's class must also be supplied in the text-box underneath the draw-window.
+
+	Pressing 'go' will cause the app to expand the pattern in GLCH, displaying the results in the 'expansion window' on the lower-left of the main window.
+
+	Again, if the mode is set to 'train' then the pattern will be added to the training database.
+
+	If the mode is set to 'classification' then the classifier will attempt to find the best match, displaying the results in the table.
+
+	The 'allow rotations' button allows the user to toggle on and off rotationally invariant pattern matching.  So, for example, if the patterns are characters of the alphabet then the user would want to turn off rotations, or else the classifier would treat M and W as identical.
+
+	This app uses two classifiers:
+
+	i) A nearest neighbor classifier
+
+	ii) A neural network classifier
+
+	In order to use the neural network classifier it first needs to be trained, which can be done by clicking on the 'build neural net' button.
+
+	The resolution of the draw and expansion windows can be adjusted through the Dim Px textboxes.  The resolution is given as N x N where N is the number in the textbox.
+
+
+The validation Window:
+
+    k-fold cross validation can be performed by clicking on the 'validation window' button, with the number of folds being entered into the text box in the new window.  The table will display the classification accuracy across each fold, with the last line giving the total accuracy across all folds.  A confusion matrix is also automatically generated which gives information on how many times items of class X are identified as class Y.
+
+Saving and loading data-files:
+
+       The 'database' of training data can be saved to disk by going to File -> Save.  Similarly, databases saved to disk can be loaded using File -> Open.  Files take the extension .clsf.
+
+
+
+
+
+
 
