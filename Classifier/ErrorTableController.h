@@ -20,8 +20,6 @@
 
 @property NSString* selectedName;
 
--(IBAction)enterPatternName:(id)sender;
-
 -(void) tableViewSelectionDidChange:(NSNotification*) notification;
 
 @end

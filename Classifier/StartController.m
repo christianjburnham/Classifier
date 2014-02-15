@@ -15,9 +15,11 @@
      postNotificationName:@"uploadDrawingToModel"
      object:self];
     
+
     NSString* patternName = [patternNameTextField stringValue];
     
     patternName = [patternName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet] ];
+    [model setPatternName:patternName];
 
     int training = [model training];
     

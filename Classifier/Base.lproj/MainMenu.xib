@@ -84,9 +84,6 @@
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
-                        <connections>
-                            <action selector="enterPatternName:" target="Ywe-Z3-jr7" id="wIQ-YC-flR"/>
-                        </connections>
                     </textField>
                     <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="QbU-t1-VSf">
                         <rect key="frame" x="405" y="397" width="291" height="256"/>
@@ -1037,7 +1034,6 @@
         <customObject id="rue-AD-iN5" customClass="Clear"/>
         <customObject id="Ywe-Z3-jr7" customClass="ErrorTableController">
             <connections>
-                <outlet property="bestFitLabel" destination="k2Q-Ze-4HX" id="n05-2d-pof"/>
                 <outlet property="errorTable" destination="KCv-60-0yX" id="13v-2H-C9Y"/>
                 <outlet property="model" destination="6ck-jw-or7" id="dVK-Fo-wVu"/>
                 <outlet property="patternNameTextField" destination="lpS-52-6mF" id="Zdb-zl-JfO"/>

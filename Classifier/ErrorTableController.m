@@ -48,12 +48,6 @@ objectValueForTableColumn:(NSTableColumn *) tableColumn
     }
 }
 
--(IBAction)enterPatternName:(id)sender{
-    NSString* name = [patternNameTextField stringValue];
-    [model setPatternName:name];
-}
-
-
 -(void) updateTable{
     
     NSMutableDictionary* errorDictionary = [model errorDictionary];
