@@ -40,6 +40,15 @@ Saving and loading data-files:
 
        The 'database' of training data can be saved to disk by going to File -> Save.  Similarly, databases saved to disk can be loaded using File -> Open.  Files take the extension .clsf.
 
+Clustering:
+
+	The small window and controls at the bottom to the right of the expansion window can be used to cluster the data into distinct clusters which can then be classified by pressing the accompanying 'go' button.  The number of clusters must be specified in the accompanying text box.
+
+
+Acknowledgements:
+
+	This project uses the FANN neural network library from Steffen Nissen available at http://leenissen.dk/fann/wp/.
+
 
 
 
