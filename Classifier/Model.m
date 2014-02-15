@@ -106,7 +106,6 @@
         
     if(_training == 1){
     
-        NSLog(@"training patternName %@",_patternName);
         NSMutableArray* coeffArray = [NSMutableArray array];
         int i = 0;
         for(int n = 0; n<_n_max;n++){
