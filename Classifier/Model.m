@@ -52,9 +52,6 @@
     _fitPicWidthMax=512;
     _fitPicHeightMax=512;
 
-
-
-    
     _databaseName = @"untitled";
     
     _belongsToCluster = malloc(sizeof(int)*_picWidthMax*_picHeightMax);

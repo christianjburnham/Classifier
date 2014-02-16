@@ -72,10 +72,6 @@
         double deltaY = 1./picHeight;
         
         
-        NSLog(@"picHeight, picWidth %d %d",picHeight,picWidth);
-        
-        
-        
         float dr[nCluster],dg[nCluster],db[nCluster];
         for(int n = 0; n<nCluster; n++){
             dr[n] =0.4*( 0.5*(float) rand()/(float) RAND_MAX-1.);
@@ -83,8 +79,6 @@
             db[n] =0.4*( 0.5*(float) rand()/(float) RAND_MAX-1.);
         }
 
-        
-        
         int pixel = 0;
         
         for (int y = 0; y < picHeight; y++) {

@@ -14,6 +14,11 @@
     int dim = (int)[fitDimText integerValue];
     [model setFitPicWidth:dim];
     [model setFitPicHeight:dim];
+
+    dim = (int)[dimText integerValue];
+    [model setPicWidth:dim];
+    [model setPicHeight:dim];
+    
     fitDimMax = [model fitPicHeightMax];
     dimMax = [model picHeightMax];
 }

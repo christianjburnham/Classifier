@@ -16,6 +16,7 @@
 		EC29B75818207975001C9437 /* Clear.m in Sources */ = {isa = PBXBuildFile; fileRef = EC29B75718207975001C9437 /* Clear.m */; };
 		EC2F146C1802321B004B76FF /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2F146B1802321B004B76FF /* Model.m */; };
 		EC2F147218023327004B76FF /* StartController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2F147118023327004B76FF /* StartController.m */; };
+		EC2FBF6218B04A6200C8211C /* ResizePic.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2FBF6118B04A6200C8211C /* ResizePic.m */; };
 		EC79972C182AE6B1002E96CA /* ErrorTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC79972B182AE6B1002E96CA /* ErrorTableController.m */; };
 		EC799732182AF7C2002E96CA /* ModeRadioController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC799731182AF7C2002E96CA /* ModeRadioController.m */; };
 		EC799735182B1D44002E96CA /* SaveController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC799734182B1D44002E96CA /* SaveController.m */; };
@@ -106,6 +107,8 @@
 		EC2F146B1802321B004B76FF /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		EC2F147018023327004B76FF /* StartController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartController.h; sourceTree = "<group>"; };
 		EC2F147118023327004B76FF /* StartController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartController.m; sourceTree = "<group>"; };
+		EC2FBF6018B04A6200C8211C /* ResizePic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResizePic.h; sourceTree = "<group>"; };
+		EC2FBF6118B04A6200C8211C /* ResizePic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResizePic.m; sourceTree = "<group>"; };
 		EC79972A182AE6B1002E96CA /* ErrorTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorTableController.h; sourceTree = "<group>"; };
 		EC79972B182AE6B1002E96CA /* ErrorTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorTableController.m; sourceTree = "<group>"; };
 		EC799730182AF7C2002E96CA /* ModeRadioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeRadioController.h; sourceTree = "<group>"; };
@@ -373,6 +376,8 @@
 				ECBCFF68183FE00200360791 /* ErrorTable.m */,
 				ECBCFF6A184020D700360791 /* NewDatabase.h */,
 				ECBCFF6B184020D700360791 /* NewDatabase.m */,
+				EC2FBF6018B04A6200C8211C /* ResizePic.h */,
+				EC2FBF6118B04A6200C8211C /* ResizePic.m */,
 				ECBCFF74184026FD00360791 /* NewDatabase */,
 				EC799730182AF7C2002E96CA /* ModeRadioController.h */,
 				EC799731182AF7C2002E96CA /* ModeRadioController.m */,
@@ -565,6 +570,7 @@
 				ECBCFF69183FE00200360791 /* ErrorTable.m in Sources */,
 				ECBCFF52183EB73800360791 /* NearestGreenLight.m in Sources */,
 				ECF2B42E17FCDA4E0059A6FC /* main.m in Sources */,
+				EC2FBF6218B04A6200C8211C /* ResizePic.m in Sources */,
 				ECBCFF81184233BB00360791 /* DatabaseLabelController.m in Sources */,
 				EC2F147218023327004B76FF /* StartController.m in Sources */,
 				ECBCFF37183AE89800360791 /* TrainingModelRadioController.m in Sources */,

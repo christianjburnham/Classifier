@@ -13,6 +13,142 @@
 @implementation DrawView
 
 
+- (NSDragOperation)draggingEntered:(id )sender
+{
+    
+    if ((NSDragOperationGeneric & [sender draggingSourceOperationMask])
+        == NSDragOperationGeneric) {
+
+        highlighted = 1;
+        [self setNeedsDisplay:YES];
+        return NSDragOperationGeneric;
+        
+    } // end if
+    
+    // not a drag we can use
+    return NSDragOperationNone;
+    
+} // end draggingEntered
+
+- (void)draggingExited:(id < NSDraggingInfo >)sender{
+    highlighted = 0;
+    [self setNeedsDisplay:YES];
+}
+
+
+- (BOOL)prepareForDragOperation:(id )sender {
+    return YES;
+} // end prepareForDragOperation
+
+
+- (BOOL)performDragOperation:(id )sender {
+    NSPasteboard *zPasteboard = [sender draggingPasteboard];
+    // define the images  types we accept
+    // NSPasteboardTypeTIFF: (used to be NSTIFFPboardType).
+    // NSFilenamesPboardType:An array of NSString filenames
+    NSArray *zImageTypesAry = [NSArray arrayWithObjects:NSPasteboardTypeTIFF,
+                               NSFilenamesPboardType, nil];
+    
+    NSString *zDesiredType =
+    [zPasteboard availableTypeFromArray:zImageTypesAry];
+    
+    if ([zDesiredType isEqualToString:NSPasteboardTypeTIFF]) {
+        NSData *zPasteboardData   = [zPasteboard dataForType:zDesiredType];
+        if (zPasteboardData == nil) {
+            NSLog(@"Error: MyNSView zPasteboardData == nil");
+            return NO;
+        } // end if
+        
+        _nsImageObj = [[NSImage alloc] initWithData:zPasteboardData];
+        [self setNeedsDisplay:YES];
+        return YES;
+        
+    } //end if
+    
+    
+    if ([zDesiredType isEqualToString:NSFilenamesPboardType]) {
+        // the pasteboard contains a list of file names
+        //Take the first one
+        NSArray *zFileNamesAry =
+        [zPasteboard propertyListForType:@"NSFilenamesPboardType"];
+        NSString *zPath = [zFileNamesAry objectAtIndex:0];
+        NSImage *zNewImage = [[NSImage alloc] initWithContentsOfFile:zPath];
+        
+        if (zNewImage == nil) {
+            NSLog(@"Error: MyNSView performDragOperation zNewImage == nil");
+            return NO;
+        }// end if
+        
+        _nsImageObj = zNewImage;
+
+
+        
+        NSImage* image=zNewImage;
+
+        int width = [model picWidth];
+        int height = [model picHeight];
+        
+        NSSize newSize = NSMakeSize(width, height);
+        
+        
+        ResizePic* resize = [[ResizePic alloc] init];
+        
+        [resize imageResize:image newSize:newSize];
+        
+        
+        //    NSImage* image=[NSImage imageNamed:@"leafTest.tiff"];
+        NSBitmapImageRep* bmp = ImageRepFromImage(image);
+        
+        unsigned char* data = [bmp bitmapData];
+        int picHeight = (int)[bmp pixelsHigh];
+        int picWidth = (int)[bmp pixelsWide];
+        
+        unsigned char* imageData = malloc(sizeof(unsigned char*)*picHeight*picWidth*4);
+        for(int i = 0;i<4*picHeight*picWidth;i++){
+            imageData[i] = data[i];
+        }
+        
+        
+        unsigned char* grid2 = malloc(sizeof(unsigned char)*picHeight*picWidth);
+        
+        int j = 0;
+        for(int i = 0;i<picHeight*picWidth;i++){
+            grid2[i]=(data[j]+data[j+1]+data[j+2])/3.;
+            j+=4;
+        }
+        
+        
+        [model setPicHeight:picHeight];
+        [model setPicWidth:picWidth];
+        [model setGreyPicData:grid2];
+        
+        [[NSNotificationCenter defaultCenter]
+         postNotificationName:@"putPicFromModelIntoDrawView"
+         object:self];
+        
+        [[NSNotificationCenter defaultCenter]
+         postNotificationName:@"updateDrawView"
+         object:self];
+
+        
+        
+        
+        
+        [self setNeedsDisplay:YES];
+        return YES;
+        
+    }// end if
+    
+    //this cant happen ???
+    NSLog(@"Error MyNSView performDragOperation");
+    return NO;
+    
+} // end performDragOperation
+
+
+- (void)concludeDragOperation:(id )sender {
+    [self setNeedsDisplay:YES];
+} // end concludeDragOperation
 
 
 -(void) awakeFromNib{
@@ -34,7 +170,10 @@
                name:@"updateDrawView"
              object:nil];
     
+    _nsImageObj = nil;
     
+    [self registerForDraggedTypes:
+     [NSArray arrayWithObjects:NSTIFFPboardType,NSFilenamesPboardType,nil]];
     [self prepare];
 }
 
@@ -76,6 +215,9 @@
 - (void)drawRect:(NSRect)dirtyRect
 {
     
+
+    
+    
     inverse = [model inverse];
     
     glMatrixMode (GL_PROJECTION);
@@ -89,6 +231,18 @@
     
     glMatrixMode (GL_MODELVIEW);
     glLoadIdentity();
+    
+    
+    if(highlighted){
+        
+        glClearColor(0.5, 0.5, 0.5, 0.0);
+        glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
+        glEnd();
+        glFinish();
+        highlighted = 0;
+        return;
+    }
+    
     
     float deltaX = 1./(float) max;
     float deltaY = 1./(float) max;

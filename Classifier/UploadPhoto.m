@@ -32,10 +32,10 @@
     int height = [model picHeight];
     
     NSSize newSize = NSMakeSize(width, height);
-    [self imageResize:image newSize:newSize];
+    ResizePic* resize  = [[ResizePic alloc] init];
+    [resize imageResize:image newSize:newSize];
     
     
-//    NSImage* image=[NSImage imageNamed:@"leafTest.tiff"];
     NSBitmapImageRep* bmp = ImageRepFromImage(image);
     
     unsigned char* data = [bmp bitmapData];
@@ -69,32 +69,6 @@
      postNotificationName:@"updateDrawView"
      object:self];
     
-}
-
-
--(NSImage *)imageResize:(NSImage*)anImage newSize:(NSSize)newSize {
-
-    //code taken from
-    //http://stackoverflow.com/questions/11949250/how-to-resize-nsimage
-    
-    NSImage *sourceImage = anImage;
-    [sourceImage setScalesWhenResized:YES];
-    
-    // Report an error if the source isn't a valid image
-    if (![sourceImage isValid])
-    {
-        NSLog(@"Invalid Image");
-    } else
-    {
-        NSImage *smallImage = [[NSImage alloc] initWithSize: newSize];
-        [smallImage lockFocus];
-        [sourceImage setSize: newSize];
-        [[NSGraphicsContext currentContext] setImageInterpolation:NSImageInterpolationHigh];
-        [sourceImage drawAtPoint:NSZeroPoint fromRect:CGRectMake(0, 0, newSize.width, newSize.height) operation:NSCompositeCopy fraction:1.0];
-        [smallImage unlockFocus];
-        return smallImage;
-    }
-    return nil;
 }
 
 

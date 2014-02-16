@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "Model.h"
+#import "ResizePic.h"
 
 @interface UploadPhoto : NSObject{
     IBOutlet Model* model;
 }
 -(IBAction)uploadButtonPressed:(id)sender;
--(NSImage *)imageResize:(NSImage*)anImage newSize:(NSSize)newSize;
 @end
 
 //NSBitmapImageRep *ImageRepFromImage(NSImage *image);

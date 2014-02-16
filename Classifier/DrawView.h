@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Model.h"
+#import "ResizePic.h"
 
 @interface DrawView : NSOpenGLView{
     NSPoint startPoint;
@@ -16,7 +17,10 @@
     NSNotificationCenter* nc;
     IBOutlet Model* model;
     int inverse;
+    NSImage	* nsImageObj;
+    BOOL highlighted;
 }
 @property unsigned char* grid;
 @property int max;
+@property  NSImage	* nsImageObj;
 @end
