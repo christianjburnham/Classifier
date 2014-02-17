@@ -52,7 +52,7 @@
                         </connections>
                     </openGLView>
                     <openGLView useAuxiliaryDepthBufferStencil="NO" allowOffline="YES" id="GcA-gp-WLV" customClass="FitView">
-                        <rect key="frame" x="108" y="35" width="256" height="256"/>
+                        <rect key="frame" x="108" y="20" width="256" height="256"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <connections>
                             <outlet property="model" destination="6ck-jw-or7" id="atv-q9-oih"/>
@@ -195,7 +195,7 @@
                         </connections>
                     </matrix>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="k2Q-Ze-4HX">
-                        <rect key="frame" x="107" y="295" width="281" height="34"/>
+                        <rect key="frame" x="107" y="308" width="281" height="34"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="OOB-5d-Es3">
                             <font key="font" metaFont="system" size="20"/>
@@ -215,7 +215,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" id="UEc-cA-fq6">
-                        <rect key="frame" x="458" y="225" width="141" height="32"/>
+                        <rect key="frame" x="458" y="235" width="141" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Build Neural net" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1iw-PI-SLm">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -226,7 +226,7 @@
                         </connections>
                     </button>
                     <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autorecalculatesCellSize="YES" id="W1r-t9-sIH">
-                        <rect key="frame" x="429" y="252" width="142" height="46"/>
+                        <rect key="frame" x="429" y="262" width="142" height="46"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         <size key="cellSize" width="132" height="18"/>
@@ -252,15 +252,15 @@
                         </connections>
                     </matrix>
                     <customView id="AB4-oo-vYQ" customClass="NeuralGreenLight">
-                        <rect key="frame" x="406" y="261" width="20" height="20"/>
+                        <rect key="frame" x="406" y="271" width="20" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                     <customView id="Snx-AB-ozJ" customClass="NearestGreenLight">
-                        <rect key="frame" x="406" y="282" width="20" height="20"/>
+                        <rect key="frame" x="406" y="292" width="20" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                     <customView id="UTr-xb-N8P" customClass="ModelImageView">
-                        <rect key="frame" x="602" y="230" width="75" height="106"/>
+                        <rect key="frame" x="602" y="240" width="75" height="106"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <connections>
                             <outlet property="model" destination="6ck-jw-or7" id="P1Y-Oo-o1W"/>
@@ -287,7 +287,7 @@
                         </connections>
                     </button>
                     <button id="5pj-0w-iLV">
-                        <rect key="frame" x="427" y="195" width="117" height="18"/>
+                        <rect key="frame" x="427" y="215" width="117" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Allow rotations" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="vhH-7x-yw8">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -387,6 +387,33 @@
                             </connections>
                         </stepperCell>
                     </stepper>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="S9c-oc-acj">
+                        <rect key="frame" x="109" y="657" width="37" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Draw" id="oQW-O2-hF6">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="fER-8T-u6C">
+                        <rect key="frame" x="109" y="280" width="68" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Expansion" id="dHM-C0-c70">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ezr-wt-Egi">
+                        <rect key="frame" x="386" y="183" width="49" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Cluster" id="hGy-S5-qhQ">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
         </window>
