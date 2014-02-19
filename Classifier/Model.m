@@ -51,6 +51,11 @@
     
     _fitPicWidthMax=512;
     _fitPicHeightMax=512;
+    
+    _nHiddenNoRot = 67;
+    _nHiddenRot = 63;
+    _errorMaxNoRot = 0.00042;
+    _errorMaxRot = 0.0028;
 
     _databaseName = @"untitled";
     
@@ -527,10 +532,11 @@
     const unsigned int num_input = nInput;
     const unsigned int num_output = nKeys;
     const unsigned int num_layers = 3;
-    const unsigned int num_neurons_hidden = (nKeys+nInput)/2.;
+    const unsigned int num_neurons_hidden = _nHiddenNoRot;
     const unsigned int max_epochs = 40000;
     const unsigned int epochs_between_reports = 1000;
-    const float desired_error = 0.00042;
+    const float desired_error = _errorMaxNoRot;
+    
 //    const float desired_error = 0.00042;
     float mse = 100.*desired_error;
     
@@ -640,12 +646,12 @@
     const unsigned int num_input = nInput;
     const unsigned int num_output = nKeys;
     const unsigned int num_layers = 3;
-    const unsigned int num_neurons_hidden = (nKeys+nInput)/2.;
+    const unsigned int num_neurons_hidden = _nHiddenRot;
     const unsigned int max_epochs = 40000;
     const unsigned int epochs_between_reports = 1000;
-    const float desired_error = 0.0028;
+    const float desired_error = _errorMaxRot;
 //    const float desired_error = 0.0028;
-
+    
     
     float mse = 100.*desired_error;
     

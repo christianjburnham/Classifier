@@ -34,11 +34,7 @@ Main Window:
 
 The validation Window:
 
-    k-fold cross validation can be performed by clicking on the 'validation' button, with the number of folds being entered into the text box in the new window.  The table will display the classification accuracy across each fold, with the last line giving the total accuracy across all folds.  A confusion matrix is also automatically generated which gives information on how many times items of class X are identified as class Y.
-
-Neural Net Params:
-
-       Clicking on the 'Neural Net params' button brings up a window allowing modification of the free parameters used by the neural net classifier.  The neural net model uses two adjustable parameters:  i) Number of hidden neurons and ii) Error tolerance.  These are set separately for the cases of 'rotations' (used when the 'allow rotations' button is checked and 'no rotations', for when the 'allow rotations' button is unchecked.
+    k-fold cross validation can be performed by clicking on the 'validation window' button, with the number of folds being entered into the text box in the new window.  The table will display the classification accuracy across each fold, with the last line giving the total accuracy across all folds.  A confusion matrix is also automatically generated which gives information on how many times items of class X are identified as class Y.
 
 Saving and loading data-files:
 

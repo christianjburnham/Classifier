@@ -55,6 +55,9 @@
     
     NSString* bestClass;
     
+    int nHiddenNoRot,nHiddenRot;
+    float errorMaxNoRot,errorMaxRot;
+    
 }
 @property int n_max;
 @property NSString* databaseName;
@@ -72,6 +75,9 @@
 @property int fitPicHeight;
 @property int fitPicWidthMax;
 @property int fitPicHeightMax;
+
+@property int nHiddenRot,nHiddenNoRot;
+@property float errorMaxRot,errorMaxNoRot;
 
 @property unsigned char* fit;
 @property NSMutableDictionary* coefficientsDictionary;

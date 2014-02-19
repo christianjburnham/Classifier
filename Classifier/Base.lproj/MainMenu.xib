@@ -34,7 +34,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" id="XNS-qh-6px">
-                        <rect key="frame" x="524" y="13" width="58" height="32"/>
+                        <rect key="frame" x="524" y="8" width="58" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Go" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LCo-Fp-ICh">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -59,7 +59,7 @@
                         </connections>
                     </openGLView>
                     <openGLView useAuxiliaryDepthBufferStencil="NO" allowOffline="YES" id="gbh-cR-EmO" customClass="ClusterView">
-                        <rect key="frame" x="384" y="51" width="128" height="128"/>
+                        <rect key="frame" x="384" y="46" width="128" height="128"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <connections>
                             <outlet property="model" destination="6ck-jw-or7" id="g4V-x5-BvL"/>
@@ -204,9 +204,9 @@
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" id="Uoo-OE-vJc">
-                        <rect key="frame" x="546" y="99" width="145" height="32"/>
+                        <rect key="frame" x="631" y="8" width="96" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Validation Window" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JeX-2V-Uam">
+                        <buttonCell key="cell" type="push" title="Validation" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JeX-2V-Uam">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -215,7 +215,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" id="UEc-cA-fq6">
-                        <rect key="frame" x="458" y="235" width="141" height="32"/>
+                        <rect key="frame" x="440" y="235" width="157" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Build Neural net" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1iw-PI-SLm">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -223,6 +223,17 @@
                         </buttonCell>
                         <connections>
                             <action selector="buildNetButtonPressed:" target="gqN-5y-mcB" id="JTy-6T-SJ5"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="gJC-4b-cI0">
+                        <rect key="frame" x="440" y="214" width="157" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Neural Net Params" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="j6d-Rl-5r4">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="launchNeuralWindow:" target="iqs-zy-UCa" id="ccm-WY-YZ0"/>
                         </connections>
                     </button>
                     <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autorecalculatesCellSize="YES" id="W1r-t9-sIH">
@@ -287,7 +298,7 @@
                         </connections>
                     </button>
                     <button id="5pj-0w-iLV">
-                        <rect key="frame" x="427" y="215" width="117" height="18"/>
+                        <rect key="frame" x="427" y="200" width="117" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Allow rotations" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="vhH-7x-yw8">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -298,7 +309,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" id="BUK-a0-dcA">
-                        <rect key="frame" x="378" y="13" width="85" height="32"/>
+                        <rect key="frame" x="378" y="8" width="85" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Cluster" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kfe-Ef-pR8">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -309,7 +320,7 @@
                         </connections>
                     </button>
                     <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" id="jAz-9I-gIq">
-                        <rect key="frame" x="498" y="16" width="19" height="27"/>
+                        <rect key="frame" x="498" y="11" width="19" height="27"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <stepperCell key="cell" continuous="YES" alignment="left" minValue="-100" maxValue="100" id="rGY-0Y-bys"/>
                         <connections>
@@ -317,7 +328,7 @@
                         </connections>
                     </stepper>
                     <textField verticalHuggingPriority="750" id="fhy-Rc-hUF">
-                        <rect key="frame" x="466" y="19" width="31" height="22"/>
+                        <rect key="frame" x="466" y="14" width="31" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Xxg-oK-Q9A">
                             <font key="font" metaFont="system"/>
@@ -406,7 +417,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ezr-wt-Egi">
-                        <rect key="frame" x="386" y="183" width="49" height="17"/>
+                        <rect key="frame" x="386" y="178" width="49" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Cluster" id="hGy-S5-qhQ">
                             <font key="font" metaFont="system"/>
@@ -1124,6 +1135,11 @@
         <customObject id="ZDm-lu-6Vd" customClass="LaunchValidateWindowController">
             <connections>
                 <outlet property="model" destination="6ck-jw-or7" id="R9P-Az-VUP"/>
+            </connections>
+        </customObject>
+        <customObject id="iqs-zy-UCa" customClass="LaunchNeuralWindowController">
+            <connections>
+                <outlet property="model" destination="6ck-jw-or7" id="LrV-mX-280"/>
             </connections>
         </customObject>
         <customObject id="cdJ-Lz-zC9" customClass="InvariantController">

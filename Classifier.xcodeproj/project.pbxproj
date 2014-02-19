@@ -17,6 +17,9 @@
 		EC2F146C1802321B004B76FF /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2F146B1802321B004B76FF /* Model.m */; };
 		EC2F147218023327004B76FF /* StartController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2F147118023327004B76FF /* StartController.m */; };
 		EC2FBF6218B04A6200C8211C /* ResizePic.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2FBF6118B04A6200C8211C /* ResizePic.m */; };
+		EC34DFD418B2F2C900AB13BE /* LaunchNeuralWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC34DFD318B2F2C900AB13BE /* LaunchNeuralWindowController.m */; };
+		EC34DFD718B2F4AB00AB13BE /* Neural.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC34DFD618B2F4AB00AB13BE /* Neural.xib */; };
+		EC34DFDA18B2F4EB00AB13BE /* NeuralWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC34DFD918B2F4EB00AB13BE /* NeuralWindowController.m */; };
 		EC79972C182AE6B1002E96CA /* ErrorTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC79972B182AE6B1002E96CA /* ErrorTableController.m */; };
 		EC799732182AF7C2002E96CA /* ModeRadioController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC799731182AF7C2002E96CA /* ModeRadioController.m */; };
 		EC799735182B1D44002E96CA /* SaveController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC799734182B1D44002E96CA /* SaveController.m */; };
@@ -30,6 +33,7 @@
 		EC9DF5AC18034F3600A2862A /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9DF5AB18034F3600A2862A /* OpenGL.framework */; };
 		EC9DF5BF1807332800A2862A /* FitView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9DF5BE1807332800A2862A /* FitView.m */; };
 		EC9DF5C31807375900A2862A /* Polynomials.c in Sources */ = {isa = PBXBuildFile; fileRef = EC9DF5C21807375900A2862A /* Polynomials.c */; };
+		ECB60B1618B30AA5000C534B /* NeuralParametersController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB60B1518B30AA5000C534B /* NeuralParametersController.m */; };
 		ECBCFF2818399EF400360791 /* floatfann.c in Sources */ = {isa = PBXBuildFile; fileRef = ECBCFF2118399EF400360791 /* floatfann.c */; };
 		ECBCFF341839A07B00360791 /* BuildNetController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECBCFF331839A07B00360791 /* BuildNetController.m */; };
 		ECBCFF37183AE89800360791 /* TrainingModelRadioController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECBCFF36183AE89800360791 /* TrainingModelRadioController.m */; };
@@ -109,6 +113,11 @@
 		EC2F147118023327004B76FF /* StartController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartController.m; sourceTree = "<group>"; };
 		EC2FBF6018B04A6200C8211C /* ResizePic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResizePic.h; sourceTree = "<group>"; };
 		EC2FBF6118B04A6200C8211C /* ResizePic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResizePic.m; sourceTree = "<group>"; };
+		EC34DFD218B2F2C900AB13BE /* LaunchNeuralWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchNeuralWindowController.h; sourceTree = "<group>"; };
+		EC34DFD318B2F2C900AB13BE /* LaunchNeuralWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchNeuralWindowController.m; sourceTree = "<group>"; };
+		EC34DFD618B2F4AB00AB13BE /* Neural.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Neural.xib; sourceTree = "<group>"; };
+		EC34DFD818B2F4EB00AB13BE /* NeuralWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeuralWindowController.h; sourceTree = "<group>"; };
+		EC34DFD918B2F4EB00AB13BE /* NeuralWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeuralWindowController.m; sourceTree = "<group>"; };
 		EC79972A182AE6B1002E96CA /* ErrorTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorTableController.h; sourceTree = "<group>"; };
 		EC79972B182AE6B1002E96CA /* ErrorTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorTableController.m; sourceTree = "<group>"; };
 		EC799730182AF7C2002E96CA /* ModeRadioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeRadioController.h; sourceTree = "<group>"; };
@@ -132,6 +141,8 @@
 		EC9DF5BE1807332800A2862A /* FitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitView.m; sourceTree = "<group>"; };
 		EC9DF5C21807375900A2862A /* Polynomials.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Polynomials.c; sourceTree = "<group>"; };
 		EC9DF5C41807376C00A2862A /* Polynomials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Polynomials.h; sourceTree = "<group>"; };
+		ECB60B1418B30AA5000C534B /* NeuralParametersController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeuralParametersController.h; sourceTree = "<group>"; };
+		ECB60B1518B30AA5000C534B /* NeuralParametersController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeuralParametersController.m; sourceTree = "<group>"; };
 		ECBCFF1A18399EF400360791 /* fann_cascade.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fann_cascade.c; sourceTree = "<group>"; };
 		ECBCFF1B18399EF400360791 /* fann_error.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fann_error.c; sourceTree = "<group>"; };
 		ECBCFF1C18399EF400360791 /* fann_train_data.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fann_train_data.c; sourceTree = "<group>"; };
@@ -244,6 +255,18 @@
 				ECBCFF5D183EBF4500360791 /* neuron.png */,
 			);
 			name = pics;
+			sourceTree = "<group>";
+		};
+		EC34DFD518B2F32700AB13BE /* Neural */ = {
+			isa = PBXGroup;
+			children = (
+				EC34DFD618B2F4AB00AB13BE /* Neural.xib */,
+				EC34DFD818B2F4EB00AB13BE /* NeuralWindowController.h */,
+				EC34DFD918B2F4EB00AB13BE /* NeuralWindowController.m */,
+				ECB60B1418B30AA5000C534B /* NeuralParametersController.h */,
+				ECB60B1518B30AA5000C534B /* NeuralParametersController.m */,
+			);
+			name = Neural;
 			sourceTree = "<group>";
 		};
 		ECBCFF1918399E7600360791 /* FANN */ = {
@@ -402,6 +425,9 @@
 				ECBCFF751840271B00360791 /* Validate */,
 				ECBCFF3B183C401300360791 /* LaunchValidateWindowController.h */,
 				ECBCFF3C183C401300360791 /* LaunchValidateWindowController.m */,
+				EC34DFD218B2F2C900AB13BE /* LaunchNeuralWindowController.h */,
+				EC34DFD318B2F2C900AB13BE /* LaunchNeuralWindowController.m */,
+				EC34DFD518B2F32700AB13BE /* Neural */,
 				EC2F147018023327004B76FF /* StartController.h */,
 				EC2F147118023327004B76FF /* StartController.m */,
 				ECBCFF321839A07B00360791 /* BuildNetController.h */,
@@ -526,6 +552,7 @@
 				ECBCFF3F183C424700360791 /* Validate.xib in Resources */,
 				ECBCFF5C183EBE2100360791 /* textured_paper.png in Resources */,
 				ECBCFF731840220500360791 /* NewDatabase.xib in Resources */,
+				EC34DFD718B2F4AB00AB13BE /* Neural.xib in Resources */,
 				ECBCFF66183EF32400360791 /* nearest.png in Resources */,
 				ECBCFF5E183EBF4500360791 /* neuron.png in Resources */,
 				ECF2B42C17FCDA4E0059A6FC /* InfoPlist.strings in Resources */,
@@ -565,8 +592,11 @@
 				ECBCFF3D183C401300360791 /* LaunchValidateWindowController.m in Sources */,
 				ECBCFF6C184020D700360791 /* NewDatabase.m in Sources */,
 				EC8A527D18567D2F00AAD11A /* ClusterButtonController.m in Sources */,
+				ECB60B1618B30AA5000C534B /* NeuralParametersController.m in Sources */,
 				EC8A5274184E675200AAD11A /* ConfusionView.m in Sources */,
 				EC9DF5BF1807332800A2862A /* FitView.m in Sources */,
+				EC34DFDA18B2F4EB00AB13BE /* NeuralWindowController.m in Sources */,
+				EC34DFD418B2F2C900AB13BE /* LaunchNeuralWindowController.m in Sources */,
 				ECBCFF69183FE00200360791 /* ErrorTable.m in Sources */,
 				ECBCFF52183EB73800360791 /* NearestGreenLight.m in Sources */,
 				ECF2B42E17FCDA4E0059A6FC /* main.m in Sources */,
