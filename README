@@ -38,7 +38,7 @@ The validation Window:
 
 Neural Net Params:
 
-       Clicking on the 'Neural Net params' button brings up a window allowing modification of the free parameters used by the neural net classifier.  The neural net model uses two adjustable parameters:  i) Number of hidden neurons and ii) Error tolerance.  These are set separately for the cases of 'rotations' (used when the 'allow rotations' button is checked and 'no rotations', for when the 'allow rotations' button is unchecked.
+       Clicking on the 'Neural Net params' button brings up a window allowing modification of the free parameters used by the neural net classifier.  The neural net model uses two adjustable parameters:  i) Number of hidden neurons and ii) Error tolerance.  Two non-adjustable parameters are also displayed: i) Number of input neurons (given by the size of the tuples) and ii) number of output neurons (equal to the number of classes).  These are set separately for the cases of 'rotations' (used when the 'allow rotations' button is checked and 'no rotations', for when the 'allow rotations' button is unchecked.
 
 Saving and loading data-files:
 

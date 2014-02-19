@@ -58,6 +58,8 @@
     int nHiddenNoRot,nHiddenRot;
     float errorMaxNoRot,errorMaxRot;
     
+    int nInputNoRot,nInputRot,nOutputNoRot,nOutputRot;
+    
 }
 @property int n_max;
 @property NSString* databaseName;
@@ -71,12 +73,12 @@
 @property int picWidthMax;
 @property int picHeightMax;
 
-@property int fitPicWidth;
-@property int fitPicHeight;
-@property int fitPicWidthMax;
-@property int fitPicHeightMax;
+@property int fitPicWidth,fitPicHeight;
+@property int fitPicWidthMax,fitPicHeightMax;
 
-@property int nHiddenRot,nHiddenNoRot;
+@property int nHiddenNoRot,nHiddenRot;
+@property int nInputNoRot,nInputRot;
+@property int nOutputNoRot,nOutputRot;
 @property float errorMaxRot,errorMaxNoRot;
 
 @property unsigned char* fit;

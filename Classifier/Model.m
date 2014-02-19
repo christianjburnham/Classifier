@@ -56,6 +56,11 @@
     _nHiddenRot = 63;
     _errorMaxNoRot = 0.00042;
     _errorMaxRot = 0.0028;
+    _nInputNoRot = 0;
+    _nInputRot = 0;
+    _nOutputNoRot = 0;
+    _nOutputRot = 0;
+    
 
     _databaseName = @"untitled";
     
@@ -537,6 +542,14 @@
     const unsigned int epochs_between_reports = 1000;
     const float desired_error = _errorMaxNoRot;
     
+    _nInputNoRot = nInput;
+    _nOutputNoRot = nKeys;
+    
+    [[NSNotificationCenter defaultCenter]
+     postNotificationName:@"updateNeuralParams"
+     object:self];
+    
+    
 //    const float desired_error = 0.00042;
     float mse = 100.*desired_error;
     
@@ -652,6 +665,12 @@
     const float desired_error = _errorMaxRot;
 //    const float desired_error = 0.0028;
     
+    _nInputRot = nInput;
+    _nOutputRot = nKeys;
+    
+    [[NSNotificationCenter defaultCenter]
+     postNotificationName:@"updateNeuralParams"
+     object:self];
     
     float mse = 100.*desired_error;
     

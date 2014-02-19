@@ -27,7 +27,23 @@
     formattedNumber = [NSString stringWithFormat:@"%f", errorMaxRot];
     [errorMaxRotText setStringValue:formattedNumber];
 
+    int nInputNoRot = [model nInputNoRot];
+    int nInputRot = [model nInputRot];
+    int nOutputNoRot = [model nOutputNoRot];
+    int nOutputRot = [model nOutputRot];
     
+    [nInputNoRotText setIntegerValue:nInputNoRot];
+    [nInputRotText setIntegerValue:nInputRot];
+    [nOutputNoRotText setIntegerValue:nOutputNoRot];
+    [nOutputRotText setIntegerValue:nOutputRot];
+    
+    
+    NSNotificationCenter* nc=[NSNotificationCenter defaultCenter];
+    [nc addObserver:self
+           selector:@selector(updateNeuralParams)
+               name:@"updateNeuralParams"
+             object:nil];
+
 }
 
 
@@ -68,6 +84,18 @@
 -(IBAction)errorMaxRotTextEntered:(id)sender{
     float errorMaxRot = [sender floatValue];
     [model setErrorMaxRot:errorMaxRot];
+}
+
+-(void) updateNeuralParams{
+    int nInputNoRot = [model nInputNoRot];
+    int nInputRot = [model nInputRot];
+    int nOutputNoRot = [model nOutputNoRot];
+    int nOutputRot = [model nOutputRot];
+    
+    [nInputNoRotText setIntegerValue:nInputNoRot];
+    [nInputRotText setIntegerValue:nInputRot];
+    [nOutputNoRotText setIntegerValue:nOutputNoRot];
+    [nOutputRotText setIntegerValue:nOutputRot];
 }
 
 

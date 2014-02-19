@@ -15,14 +15,14 @@
         <window title="Neural Network Parameters" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="N5u-gA-ssO">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="163" y="199" width="424" height="137"/>
+            <rect key="contentRect" x="163" y="199" width="424" height="222"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
             <view key="contentView" id="SkB-bO-wyg">
-                <rect key="frame" x="0.0" y="0.0" width="424" height="137"/>
+                <rect key="frame" x="0.0" y="0.0" width="424" height="222"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField verticalHuggingPriority="750" id="8Q5-FS-Vzw">
-                        <rect key="frame" x="158" y="60" width="96" height="22"/>
+                        <rect key="frame" x="158" y="71" width="96" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Ivu-PN-R6x">
                             <font key="font" metaFont="system"/>
@@ -34,7 +34,7 @@
                         </connections>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="4u2-AL-6zd">
-                        <rect key="frame" x="30" y="65" width="115" height="17"/>
+                        <rect key="frame" x="30" y="76" width="115" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="# hidden neurons" id="SN7-Qg-PXe">
                             <font key="font" metaFont="system"/>
@@ -42,8 +42,26 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="eJa-wz-luO">
+                        <rect key="frame" x="30" y="111" width="114" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="# output neurons" id="ho4-24-qTp">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="t4a-av-MXa">
+                        <rect key="frame" x="30" y="141" width="105" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="# input neurons" id="3bg-bi-0Py">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                     <textField verticalHuggingPriority="750" id="N4a-Lr-2lW">
-                        <rect key="frame" x="158" y="20" width="96" height="22"/>
+                        <rect key="frame" x="158" y="31" width="96" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="tHy-SW-6cZ">
                             <font key="font" metaFont="system"/>
@@ -55,7 +73,7 @@
                         </connections>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="5yc-Z5-033">
-                        <rect key="frame" x="42" y="25" width="100" height="17"/>
+                        <rect key="frame" x="42" y="36" width="100" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Error Tolerance" id="sSs-ok-Wru">
                             <font key="font" metaFont="system"/>
@@ -64,7 +82,7 @@
                         </textFieldCell>
                     </textField>
                     <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" id="Qbk-bS-wa4">
-                        <rect key="frame" x="253" y="57" width="19" height="27"/>
+                        <rect key="frame" x="253" y="68" width="19" height="27"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <stepperCell key="cell" continuous="YES" alignment="left" minValue="-100" maxValue="100" id="bLv-lb-RtW"/>
                         <connections>
@@ -72,7 +90,7 @@
                         </connections>
                     </stepper>
                     <textField verticalHuggingPriority="750" id="bid-ZY-e64">
-                        <rect key="frame" x="293" y="60" width="96" height="22"/>
+                        <rect key="frame" x="293" y="71" width="96" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="vGe-2L-1FN">
                             <font key="font" metaFont="system"/>
@@ -84,7 +102,7 @@
                         </connections>
                     </textField>
                     <textField verticalHuggingPriority="750" id="GMI-gu-A15">
-                        <rect key="frame" x="293" y="20" width="96" height="22"/>
+                        <rect key="frame" x="293" y="31" width="96" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="39U-FZ-6gH">
                             <font key="font" metaFont="system"/>
@@ -96,7 +114,7 @@
                         </connections>
                     </textField>
                     <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" id="Jaf-jQ-Ru2">
-                        <rect key="frame" x="388" y="57" width="19" height="27"/>
+                        <rect key="frame" x="388" y="68" width="19" height="27"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <stepperCell key="cell" continuous="YES" alignment="left" minValue="-100" maxValue="100" id="gOF-R1-7mW"/>
                         <connections>
@@ -104,7 +122,7 @@
                         </connections>
                     </stepper>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="heE-qe-FxA">
-                        <rect key="frame" x="158" y="91" width="85" height="17"/>
+                        <rect key="frame" x="158" y="177" width="85" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="No Rotations" id="Io0-tb-b4x">
                             <font key="font" metaFont="system"/>
@@ -113,12 +131,48 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="PzS-7a-rkM">
-                        <rect key="frame" x="312" y="91" width="63" height="17"/>
+                        <rect key="frame" x="312" y="177" width="63" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Rotations" id="ixy-fQ-cJD">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="z8V-xZ-3hf">
+                        <rect key="frame" x="158" y="138" width="96" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="MeL-gl-tR2">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="NQA-Hh-u3z">
+                        <rect key="frame" x="293" y="138" width="96" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="yOV-HI-frx">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="M5n-HY-7tm">
+                        <rect key="frame" x="158" y="103" width="96" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="R9r-cU-DDX">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="1FR-F3-xpi">
+                        <rect key="frame" x="293" y="103" width="96" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="33Y-kh-8BG">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                 </subviews>
@@ -130,6 +184,10 @@
                 <outlet property="errorMaxRotText" destination="GMI-gu-A15" id="c8w-gK-vP0"/>
                 <outlet property="nHiddenNoRotText" destination="8Q5-FS-Vzw" id="nU6-gS-o6i"/>
                 <outlet property="nHiddenRotText" destination="bid-ZY-e64" id="SOH-14-xjE"/>
+                <outlet property="nInputNoRotText" destination="z8V-xZ-3hf" id="Y2l-fi-Lmk"/>
+                <outlet property="nInputRotText" destination="NQA-Hh-u3z" id="QVj-dw-ppA"/>
+                <outlet property="nOutputNoRotText" destination="M5n-HY-7tm" id="Nvp-TA-sL6"/>
+                <outlet property="nOutputRotText" destination="1FR-F3-xpi" id="3FH-SM-Uq7"/>
                 <outlet property="neuralWindowController" destination="-2" id="FoZ-Z1-03z"/>
             </connections>
         </customObject>

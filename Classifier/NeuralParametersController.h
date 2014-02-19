@@ -16,6 +16,11 @@
     IBOutlet NSTextField* errorMaxNoRotText;
     IBOutlet NSTextField* errorMaxRotText;
     IBOutlet NeuralWindowController* neuralWindowController;
+    IBOutlet NSTextField* nInputNoRotText;
+    IBOutlet NSTextField* nInputRotText;
+    IBOutlet NSTextField* nOutputNoRotText;
+    IBOutlet NSTextField* nOutputRotText;
+    
     Model* model;
 }
 
