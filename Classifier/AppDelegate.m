@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -18,5 +19,12 @@
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication {
     return YES;
 }
+
+- (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename{
+    [saveController openFile:filename];
+    
+    return YES;
+}
+
 
 @end

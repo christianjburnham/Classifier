@@ -16,4 +16,5 @@
 }
 - (IBAction)doSaveAs:(id)pId;
 - (IBAction)doOpen:(id)pId;
+-(void) openFile:(NSString*) fname;
 @end

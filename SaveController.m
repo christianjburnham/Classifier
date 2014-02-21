@@ -75,13 +75,19 @@
     } // end if
     
     NSURL * fileName = [openPanel URL];
-    NSMutableDictionary* parameters=[NSKeyedUnarchiver unarchiveObjectWithFile:[fileName path]];
     [[NSDocumentController sharedDocumentController] noteNewRecentDocumentURL:fileName];
 
-    defaultPath = [fileName path];
+    NSString* fname = [fileName path];
     NSString* nameOfFile = [[fileName path] lastPathComponent];
     defaultFileName = [nameOfFile componentsSeparatedByString:@"."][0];
+
+    [self openFile:fname];
     
+}
+
+-(void) openFile:(NSString*) fname{
+    defaultPath = fname;
+    NSMutableDictionary* parameters=[NSKeyedUnarchiver unarchiveObjectWithFile:fname];
     
     [model setDatabaseName:defaultFileName];
     [[NSNotificationCenter defaultCenter]
@@ -96,7 +102,7 @@
     [model setTraining:0];
     
     [model createNeuralNet];
-
+    
     [[NSNotificationCenter defaultCenter]
      postNotificationName:@"uploadDrawingToModel"
      object:self];
@@ -105,6 +111,7 @@
      object:self];
     
     [model calculate];
+
 }
 
 @end

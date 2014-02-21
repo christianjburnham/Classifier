@@ -1065,6 +1065,7 @@
         </menu>
         <customObject id="494" customClass="AppDelegate">
             <connections>
+                <outlet property="saveController" destination="PC6-gd-YeV" id="2ix-Sn-93Z"/>
                 <outlet property="window" destination="371" id="532"/>
             </connections>
         </customObject>

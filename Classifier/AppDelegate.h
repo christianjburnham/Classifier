@@ -7,8 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "SaveController.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate>{
+    IBOutlet SaveController* saveController;
+}
 
 @property (assign) IBOutlet NSWindow *window;
 
