@@ -413,9 +413,9 @@
     }
     
     calc_out = fann_run(ann, input);
-    for(int i = 0; i<nKeys; i++){
+    for(int i = 0; i<self.nKeys; i++){
         NSNumber* val = [NSNumber numberWithFloat:calc_out[i]];
-        [_errorDictionary setValue:val forKey:patternList[i]];
+        [_errorDictionary setValue:val forKey:self.patternList[i]];
     }
 
 }//-(void) calculateErrorsForInvariantNeuralNet:(double*) coeff
@@ -448,9 +448,9 @@
     }
     
     calc_out = fann_run(ann, input);
-    for(int i = 0; i<nKeys; i++){
+    for(int i = 0; i<self.nKeys; i++){
         NSNumber* val = [NSNumber numberWithFloat:calc_out[i]];
-        [_errorDictionary setValue:val forKey:patternList[i]];
+        [_errorDictionary setValue:val forKey:self.patternList[i]];
     }
 
 }
@@ -483,7 +483,7 @@
         count+= [coeffArray count];
     }
     
-    nKeys = (int)[_coefficientsDictionary count];
+    self.nKeys = (int)[_coefficientsDictionary count];
     
     
     //count is the number of training examples
@@ -492,7 +492,7 @@
     
     int nInput = _n_max*_n_max-1;
     
-    fprintf(f,"%d %d %d\n",count,nInput,nKeys);
+    fprintf(f,"%d %d %d\n",count,nInput,self.nKeys);
     
     for(id key in _coefficientsDictionary){
         id coeffArray = [_coefficientsDictionary objectForKey:key];
@@ -500,8 +500,8 @@
         //find out the position in patternList
         int patternNumber = -1;
 
-        for(int j=0; j<[patternList count]; j++){
-            if([patternList[j] isEqualToString:key]) patternNumber = j;
+        for(int j=0; j<[self.patternList count]; j++){
+            if([self.patternList[j] isEqualToString:key]) patternNumber = j;
         }
         
         
@@ -521,7 +521,7 @@
             
             
             //      now print out the desired result
-            for(int j = 0; j<nKeys; j++){
+            for(int j = 0; j<self.nKeys; j++){
                 if(j==patternNumber){fprintf(f,"%d ",1);}
                 else{fprintf(f,"%d ",0);}
             }
@@ -535,7 +535,7 @@
     
     
     const unsigned int num_input = nInput;
-    const unsigned int num_output = nKeys;
+    const unsigned int num_output = self.nKeys;
     const unsigned int num_layers = 3;
     const unsigned int num_neurons_hidden = _nHiddenNoRot;
     const unsigned int max_epochs = 40000;
@@ -543,7 +543,7 @@
     const float desired_error = _errorMaxNoRot;
     
     _nInputNoRot = nInput;
-    _nOutputNoRot = nKeys;
+    _nOutputNoRot = self.nKeys;
     
     [[NSNotificationCenter defaultCenter]
      postNotificationName:@"updateNeuralParams"
@@ -595,7 +595,7 @@
     
     int nInput = _n_max*_n_max-_n_max;
     
-    fprintf(f,"%d %d %d\n",count,nInput,nKeys);
+    fprintf(f,"%d %d %d\n",count,nInput,self.nKeys);
     
     for(id key in _coefficientsDictionary){
         id coeffArray = [_coefficientsDictionary objectForKey:key];
@@ -603,8 +603,8 @@
         //find out the position in patternList
         int patternNumber = -88;
         
-        for(int j=0; j<[patternList count]; j++){
-            if([patternList[j] isEqualToString:key]) patternNumber = j;
+        for(int j=0; j<[self.patternList count]; j++){
+            if([self.patternList[j] isEqualToString:key]) patternNumber = j;
         }
         
         
@@ -643,7 +643,7 @@
             
             
             //      now print out the desired result
-            for(int j = 0; j<nKeys; j++){
+            for(int j = 0; j<self.nKeys; j++){
                 if(j==patternNumber){fprintf(f,"%d ",1);}
                 else{fprintf(f,"%d ",0);}
             }
@@ -657,7 +657,7 @@
     
     
     const unsigned int num_input = nInput;
-    const unsigned int num_output = nKeys;
+    const unsigned int num_output = self.nKeys;
     const unsigned int num_layers = 3;
     const unsigned int num_neurons_hidden = _nHiddenRot;
     const unsigned int max_epochs = 40000;
@@ -666,7 +666,7 @@
 //    const float desired_error = 0.0028;
     
     _nInputRot = nInput;
-    _nOutputRot = nKeys;
+    _nOutputRot = self.nKeys;
     
     [[NSNotificationCenter defaultCenter]
      postNotificationName:@"updateNeuralParams"
@@ -695,15 +695,15 @@
     //Creates a NSMutableArray of all the class labels
 
     
-    patternList = [NSMutableArray array];
+    self.patternList = [NSMutableArray array];
     int count = 0;
     for(id key in _coefficientsDictionary){
-        [patternList addObject:key];
+        [self.patternList addObject:key];
         id coeffArray = [_coefficientsDictionary objectForKey:key];
         count+= [coeffArray count];
     }
     
-    nKeys = (int)[_coefficientsDictionary count];
+    self.nKeys = (int)[_coefficientsDictionary count];
 }
 
 

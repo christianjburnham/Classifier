@@ -11,56 +11,11 @@
 
 
 @interface Model : NSObject{
-    NSString* databaseName;
-    unsigned char *data;
-    unsigned char *picData;
-    unsigned char *greyPicData;
-    unsigned char* fit;
-
-    int picWidth,picHeight,fitPicWidth,fitPicHeight;
-    int picWidthMax,picHeightMax,fitPicWidthMax,fitPicHeightMax;
-
-    NSString* patternName;
-    
-    int n_max;
-    
-    float xx, xy, yx, yy, xvar, yvar,xCenter,yCenter;
-    NSMutableDictionary* coefficientsDictionary;
-    NSMutableDictionary* errorDictionary;
-    int training;
-    int validateFlag;
-    
-    int nKeys;
-    NSMutableArray* patternList;
-    
-    int trainingModel;
-    
-    int invariant;
-    
-    int inverse;
-
-    int nValidate;
-    
-    NSMutableArray* validateArray;
     IBOutlet NeuralGreenLight* neuralGreenLight;
-    
-    int* confusionArray;
-    int validated;
-    
-    NSMutableArray* patterns_list;
-    
-    int* belongsToCluster;
-
-    int nCluster;
-    
-    NSString* bestClass;
-    
-    int nHiddenNoRot,nHiddenRot;
-    float errorMaxNoRot,errorMaxRot;
-    
-    int nInputNoRot,nInputRot,nOutputNoRot,nOutputRot;
-    
 }
+@property int nKeys;
+@property NSMutableArray* patternList;
+
 @property int n_max;
 @property NSString* databaseName;
 @property unsigned char *data;
